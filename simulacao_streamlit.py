@@ -69,7 +69,14 @@ if st.button("Calcular e Gerar Gráficos"):
         legend_title="Legenda",
         template="plotly_white",
         xaxis=dict(zeroline=True, zerolinewidth=2, zerolinecolor='black', range=[-5, k+5]),
-        yaxis=dict(zeroline=True, zerolinewidth=2, zerolinecolor='black', range=[-0.05, 1.05])
+        yaxis=dict(zeroline=True, zerolinewidth=2, zerolinecolor='black', range=[-0.05, 1.05]),
+        legend=dict(
+            orientation="h",  # Define a orientação da legenda como horizontal
+            yanchor="top",     # Alinha a legenda ao topo
+            y=-0.3,             # Posiciona abaixo do eixo X
+            xanchor="center",  # Centraliza horizontalmente
+            x=0.5
+        )
     )
     
     # Garantindo que o gráfico fique realmente wide
