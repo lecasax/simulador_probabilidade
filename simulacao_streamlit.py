@@ -57,7 +57,7 @@ if st.button("Calcular e Gerar Gráficos"):
     
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=k_values_discretized, y=prob_cond_values_discretized, mode='lines+markers', name="P(Exata da rodada k)"))
-    fig.add_trace(go.Scatter(x=k_values_discretized, y=prob_zero_values_discretized, mode='lines+markers', name="P(0 sucessos até a rodada k)", line=dict(dash='dot'), visible="legendonly"))
+    fig.add_trace(go.Scatter(x=k_values_discretized, y=prob_zero_values_discretized, mode='lines+markers', name="P(0 sucessos até a rodada k)", line=dict(dash='dot')))
     
     for s in range(1, min(m, k) + 1):
         fig.add_trace(go.Scatter(x=k_values_discretized, y=prob_s_values_discretized[s], mode='lines+markers', name=f"P({s} sucessos até a rodada k)"))
