@@ -38,8 +38,9 @@ st.title("Calculadora de Probabilidades Condicionais e Conjuntas")
 with st.container():
     col1, col2, col3 = st.columns([1, 1, 1])
     n = col1.number_input("Tamanho do conjunto total (n):", min_value=1, value=650)
-    m = col2.number_input("Tamanho do subconjunto de interesse (m):", min_value=1, value=15)
+    m = col2.number_input("Tamanho do subconjunto de interesse (m):", min_value=1, max_value=n, value=min(15, n))  # Garantindo que m ≤ n
     k = col3.number_input("Número de rodadas (k):", min_value=1, max_value=n, value=min(650, n))  # Garantindo que k ≤ n
+
     
     #col1.caption("Tamanho do conjunto total (n)")
     #col2.caption("Tamanho do subconjunto de interesse (m)")
