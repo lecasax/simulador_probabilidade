@@ -45,7 +45,7 @@ def cria_rodadas_de_remocao(cont_por_sorteio, cont_por_lance, tamanho_do_grupo):
     return rodadas_removidas
 
 
-st.title("Seleção de modalidades de consórico")
+st.title("Modalidades de consórico")
 
 # Lista de opções de layout
 opcoes_layout = ["Modalidade A", "Modalidade B", "Modalidade C"]
